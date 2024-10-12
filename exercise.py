@@ -4,7 +4,7 @@
 # Print "Hello World!"  
 
 
-print('Hello World!')
+# print('Hello World!')
 
 
 # Exercise 2 Guido's Gorgeous Lasagna
@@ -117,75 +117,124 @@ Overview of exchanging currency when travelling: https://www.compareremit.com/mo
 
 
 
-def exchange_money(budget, exchange_rate):
-    """
+# def exchange_money(budget, exchange_rate):
+#     """
 
-    :param budget: float - amount of money you are planning to exchange.
-    :param exchange_rate: float - unit value of the foreign currency.
-    :return: float - exchanged value of the foreign currency you can receive.
-    """
+#     :param budget: float - amount of money you are planning to exchange.
+#     :param exchange_rate: float - unit value of the foreign currency.
+#     :return: float - exchanged value of the foreign currency you can receive.
+#     """
 
-    return budget / exchange_rate
-
-
-def get_change(budget, exchanging_value):
-    """
-
-    :param budget: float - amount of money you own.
-    :param exchanging_value: float - amount of your money you want to exchange now.
-    :return: float - amount left of your starting currency after exchanging.
-    """
-
-    return budget - exchanging_value
+#     return budget / exchange_rate
 
 
-def get_value_of_bills(denomination, number_of_bills):
-    """
+# def get_change(budget, exchanging_value):
+#     """
 
-    :param denomination: int - the value of a bill.
-    :param number_of_bills: int - total number of bills.
-    :return: int - calculated value of the bills.
-    """
+#     :param budget: float - amount of money you own.
+#     :param exchanging_value: float - amount of your money you want to exchange now.
+#     :return: float - amount left of your starting currency after exchanging.
+#     """
 
-    return denomination * number_of_bills
-
-
-def get_number_of_bills(amount, denomination):
-    """
-
-    :param amount: float - the total starting value.
-    :param denomination: int - the value of a single bill.
-    :return: int - number of bills that can be obtained from the amount.
-    """
-
-    return amount // denomination
+#     return budget - exchanging_value
 
 
-def get_leftover_of_bills(amount, denomination):
-    """
+# def get_value_of_bills(denomination, number_of_bills):
+#     """
 
-    :param amount: float - the total starting value.
-    :param denomination: int - the value of a single bill.
-    :return: float - the amount that is "leftover", given the current denomination.
-    """
+#     :param denomination: int - the value of a bill.
+#     :param number_of_bills: int - total number of bills.
+#     :return: int - calculated value of the bills.
+#     """
 
-    return amount % denomination
+#     return denomination * number_of_bills
 
 
-def exchangeable_value(budget, exchange_rate, spread, denomination):
-    """
+# def get_number_of_bills(amount, denomination):
+#     """
 
-    :param budget: float - the amount of your money you are planning to exchange.
-    :param exchange_rate: float - the unit value of the foreign currency.
-    :param spread: int - percentage that is taken as an exchange fee.
-    :param denomination: int - the value of a single bill.
-    :return: int - maximum value you can get.
-    """
+#     :param amount: float - the total starting value.
+#     :param denomination: int - the value of a single bill.
+#     :return: int - number of bills that can be obtained from the amount.
+#     """
 
-    spread_percentage = spread /100 * exchange_rate
-    new_rate = spread_percentage + exchange_rate
-    max_currency = budget / new_rate
-    number_of_bills = max_currency // denomination
-    max_value = int(number_of_bills) * denomination
+#     return amount // denomination
+
+
+# def get_leftover_of_bills(amount, denomination):
+#     """
+
+#     :param amount: float - the total starting value.
+#     :param denomination: int - the value of a single bill.
+#     :return: float - the amount that is "leftover", given the current denomination.
+#     """
+
+#     return amount % denomination
+
+
+# def exchangeable_value(budget, exchange_rate, spread, denomination):
+#     """
+
+#     :param budget: float - the amount of your money you are planning to exchange.
+#     :param exchange_rate: float - the unit value of the foreign currency.
+#     :param spread: int - percentage that is taken as an exchange fee.
+#     :param denomination: int - the value of a single bill.
+#     :return: int - maximum value you can get.
+#     """
+
+#     spread_percentage = spread /100 * exchange_rate
+#     new_rate = spread_percentage + exchange_rate
+#     max_currency = budget / new_rate
+#     number_of_bills = max_currency // denomination
+#     max_value = int(number_of_bills) * denomination
     
-    return max_value
+#     return max_value
+
+
+# Exercise 5 Little Sister's Essay
+
+"""Functions to help edit essay homework using string manipulation."""
+
+
+# def capitalize_title(title):
+#     """Convert the first letter of each word in the title to uppercase if needed.
+
+#     :param title: str - title string that needs title casing.
+#     :return: str - title string in title case (first letters capitalized).
+#     """
+
+#     return title.title()
+
+# capitalize_title('a clash of KINGS')
+# print(capitalize_title('a clash of KINGS'))
+
+# def check_sentence_ending(sentence):
+#     """Check the ending of the sentence to verify that a period is present.
+
+#     :param sentence: str - a sentence to check.
+#     :return: bool - return True if punctuated correctly with period, False otherwise.
+#     """
+
+#     return sentence.endswith('.')
+
+
+# def clean_up_spacing(sentence):
+#     """Verify that there isn't any whitespace at the start and end of the sentence.
+
+#     :param sentence: str - a sentence to clean of leading and trailing space characters.
+#     :return: str - a sentence that has been cleaned of leading and trailing space characters.
+#     """
+
+#     return sentence.strip()
+
+
+# def replace_word_choice(sentence, old_word, new_word):
+#     """Replace a word in the provided sentence with a new one.
+
+#     :param sentence: str - a sentence to replace words in.
+#     :param old_word: str - word to replace.
+#     :param new_word: str - replacement word.
+#     :return: str - input sentence with new words in place of old words.
+#     """
+
+#     return sentence.replace(old_word, new_word)
