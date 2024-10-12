@@ -238,3 +238,17 @@ Overview of exchanging currency when travelling: https://www.compareremit.com/mo
 #     """
 
 #     return sentence.replace(old_word, new_word)
+
+# Exercise 6 Collatz Conjecture
+
+# def steps(number):
+#     if number <= 0:
+#         raise ValueError("Only positive integers are allowed.")
+#     steps_number = 0
+#     while number != 1:
+#         number = number / 2 if number % 2 == 0 else number * 3 + 1
+#         steps_number += 1
+
+#     return steps_number
+
+# print(steps(343453455))
